@@ -1,45 +1,227 @@
-BitLut Privacy Policy
+cat > index.html <<'EOF'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BitLut Privacy Policy</title>
+  <style>
+    :root {
+      --blue: #00A2E8;
+      --blue-soft: #2FC6F6;
+      --violet: #6F4DFF;
+      --lime: #D7F632;
+      --bg: #F5F8FB;
+      --surface: #FFFFFF;
+      --text: #142033;
+      --muted: #5F6F82;
+      --line: #DCE8F2;
+      --radius: 28px;
+    }
 
-Last updated: May 2026
+    * { box-sizing: border-box; }
 
-BitLut is an Android utility application designed to synchronize fitness and health activity data between Huawei Health and Android Health Connect after explicit user authorization.
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0,162,232,.18), transparent 32rem),
+        radial-gradient(circle at top right, rgba(111,77,255,.16), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
 
-Data Processing
-BitLut may access the following categories of data after user consent:
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 56px 20px 80px;
+    }
 
-* step count;
-* heart rate data;
-* synchronization timestamps;
-* technical diagnostic logs generated locally on the device.
+    .hero {
+      padding: 44px;
+      border-radius: 36px;
+      background: linear-gradient(135deg, var(--surface), #F1FAFF);
+      box-shadow: 0 24px 80px rgba(20,32,51,.10);
+      border: 1px solid rgba(255,255,255,.75);
+    }
 
-Data Usage
-The application uses this data only for:
+    .badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(0,162,232,.10);
+      color: #006E9E;
+      font-weight: 700;
+      font-size: 14px;
+    }
 
-* synchronization between Huawei Health and Android Health Connect;
-* displaying synchronization status;
-* troubleshooting synchronization problems.
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
 
-No Sale of Data
-BitLut does not sell personal data.
+    .lead {
+      max-width: 720px;
+      font-size: 20px;
+      color: var(--muted);
+    }
 
-No Advertising SDKs
-BitLut does not use advertising SDKs.
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
 
-Local Processing
-Health data is processed locally on the user's device whenever possible.
+    section {
+      margin-top: 22px;
+      padding: 28px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.86);
+      border: 1px solid var(--line);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
 
-Third-Party Services
-BitLut interacts with:
+    section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 50px rgba(20,32,51,.08);
+      border-color: rgba(0,162,232,.32);
+    }
 
-* Huawei Health / HMS Health Kit;
-* Android Health Connect.
+    h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -.02em;
+    }
 
-User Control
-Users may revoke permissions or uninstall the application at any time.
+    ul {
+      margin: 12px 0 0;
+      padding-left: 22px;
+    }
 
-Medical Disclaimer
-BitLut is not a medical application and does not provide diagnosis, treatment, or medical advice.
+    li { margin: 8px 0; }
 
-Contact
-GitHub Repository:
-https://github.com/spntext-jpg/BitLut
+    .note {
+      border-left: 5px solid var(--violet);
+      background: #F4F0FF;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    a:hover { color: var(--violet); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <div class="badge">BitLut · Privacy Policy</div>
+      <h1>Privacy Policy</h1>
+      <p class="lead">
+        BitLut is an Android utility app that helps synchronize fitness activity data
+        from Huawei Health to Android Health Connect after explicit user authorization.
+      </p>
+      <p><strong>Last updated:</strong> May 2026</p>
+    </div>
+
+    <section>
+      <h2>1. What BitLut does</h2>
+      <p>
+        BitLut is designed to transfer selected fitness and health activity data between
+        Huawei Health and Android Health Connect. The app works only after the user grants
+        the required permissions.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Data BitLut may access</h2>
+      <p>Depending on the permissions granted by the user, BitLut may access:</p>
+      <ul>
+        <li>step count;</li>
+        <li>heart rate data;</li>
+        <li>synchronization timestamps;</li>
+        <li>technical diagnostic logs generated locally by the app.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How the data is used</h2>
+      <p>BitLut uses this data only to:</p>
+      <ul>
+        <li>synchronize activity data between Huawei Health and Android Health Connect;</li>
+        <li>show synchronization status inside the app;</li>
+        <li>help diagnose synchronization problems when the user chooses to review or copy logs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Local processing</h2>
+      <p>
+        BitLut is designed to process synchronization data locally on the user’s device whenever possible.
+        The app does not use advertising SDKs and does not sell personal data.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Third-party services</h2>
+      <p>To provide synchronization, BitLut interacts with:</p>
+      <ul>
+        <li>Huawei Health / HMS Health Kit;</li>
+        <li>Android Health Connect.</li>
+      </ul>
+      <p>
+        These services may process data according to their own privacy policies and user settings.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. User control</h2>
+      <p>
+        Users can revoke permissions at any time through Android system settings,
+        Huawei Health settings, or Health Connect settings. Users can also stop using
+        BitLut by uninstalling the app.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Data subject rights</h2>
+      <p>
+        Users may request information about the data handled by BitLut or ask questions
+        about privacy by contacting the project through GitHub.
+      </p>
+      <p>
+        Repository: <a href="https://github.com/spntext-jpg/BitLut">github.com/spntext-jpg/BitLut</a>
+      </p>
+    </section>
+
+    <section class="note">
+      <h2>8. Medical disclaimer</h2>
+      <p>
+        BitLut is not a medical application. It does not provide diagnosis, treatment,
+        medical advice, or interpretation of health conditions. The app is intended only
+        for personal activity tracking and data synchronization.
+      </p>
+    </section>
+
+    <div class="footer">
+      © 2026 BitLut. Open-source health data bridge for Android.
+    </div>
+  </main>
+</body>
+</html>
+EOF
